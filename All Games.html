@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<title>INFINITY 101 All Games Page</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<meta name="description" content="All The Games Made By INFNINITY Is Here For FREE">
+
+</head>
+
+<style>
+
+.Download{
+		border-radius: 5px;
+		cursor: pointer;
+		font-family: "Abel", sans-serif;
+		padding: 2px;
+		margin-bottom: 120px;
+		border: none;
+		width: 400px;
+		height: 50px;
+		font-weight: bold;
+		font-size: 25px;
+		background-color: black;
+		color: white;
+		transition: height 0.25s, width 0.25s, color 0.25s, background-color 0.25s, box-shadow 0.25s;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	body{
+	
+		background-color: white;
+		background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(192, 192, 192));
+
+	}
+
+	.Download:hover{
+		background-color: white;
+		color: black;
+		box-shadow: 2px 2px 10px rgba(97, 97, 97, 0.473);
+		width: 410px;
+		height: 60px;
+	}
+	
+	.Download:active{
+		opacity: 0.65;
+		background-color: rgb(190, 190, 190);
+	}
+
+	p{
+		font-family: "Montserrat", sans-serif;
+		font-size: 25px;
+		text-wrap:balance;
+	}
+	.Header-text{
+		font-family: "Montserrat", sans-serif;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	h1{
+		font-family: "Montserrat", sans-serif;
+		font-weight: bold;
+		text-align: center;
+		color: white;
+		font-size: 50px;
+	}
+
+	h2{
+		font-family: "Montserrat", sans-serif;
+		font-weight: bold;
+		text-align: center;
+		color: white;
+		margin-bottom: 25px;
+	}
+	
+	h3{
+		font-family: "Montserrat", sans-serif;
+		font-weight: bold;
+		font-size: 35px;
+	}
+
+	h4{
+		font-family: "Montserrat", sans-serif;
+		font-weight: bold;
+		font-size: 25px;
+	}
+
+	h5{
+		font-family: "Montserrat", sans-serif;
+		font-size: 20px;
+	}
+
+	.Games-Coming-Soon{
+		font-family: "Montserrat", sans-serif;
+		text-align: center;
+	}
+
+	.Game-Logo{
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 6px 20px 0 rgba(0, 0, 0, 0.35);
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	a{
+		color: transparent;
+	}
+
+	.Home-button{
+		margin-top: 10px;
+		color:black;
+		background-color: white;
+		border-style: none;
+		border-radius: 20px;
+		width: 200px;
+		height: 55px;
+		font-size: 30px;
+		font-family: "Abel", sans-serif;
+		font-weight: bold;
+		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.473);
+		transition: opacity 0.25s, width 0.25s, height 0.25s, box-shadow 0.25s, font-size 0.25s;
+	}
+
+	.Home-button:hover{
+		box-shadow: 2px 2px 10px rgb(0, 0, 0);
+		width: 210px;
+		height: 60px;
+		font-size: 35px;
+	}
+
+	.Home-button:active{
+		opacity: 0.5;
+	}
+
+	.Contact-button{
+		margin-bottom: 10px;
+		color:black;
+		background-color: white;
+		border-style: none;
+		border-radius: 20px;
+		width: 200px;
+		height: 55px;
+		font-size: 30px;
+		font-family: "Abel", sans-serif;
+		font-weight: bold;
+		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.473);
+		transition: opacity 0.25s, width 0.25s, height 0.25s, box-shadow 0.25s, font-size 0.25s;
+	}
+
+	.Contact-button:hover{
+		box-shadow: 2px 2px 10px rgb(0, 0, 0);
+		width: 210px;
+		height: 60px;
+		font-size: 35px;
+	}
+
+	.Contact-button:active{
+		opacity: 0.5;
+		box-shadow: 2px 2px 10px rgb(0, 0, 0);
+		width: 210px;
+		height: 60px;
+		font-size: 35px;
+	}
+
+	.Header{
+		background-image: linear-gradient(to bottom right, rgb(116, 116, 116), rgb(83, 83, 83));
+	}
+
+	.game-group{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.page-buttons{
+		display: flex;
+		align-items: baseline;
+		justify-content: space-evenly;
+		margin-bottom: 50px;
+	}
+
+</style>
+
+<body>
+
+	<script>
+
+		function gotolink(link){
+			window.open(link.value);
+		}
+
+		function openlink(link){
+			location.href = link.value;
+		}
+
+	</script>
+
+	<div class="Header">
+		<h1>All Games:</h1>
+	<div class="page-buttons">
+		<h2><button class = "Home-button" onclick="openlink(this)" value ="index.html">Home</button></h2>
+		<button class = "Contact-button" onclick="openlink(this)" value ="Contact.html">Contact</button>
+	</div>
+	</div>
+<div class="game-group">
+	<img class = "Game-Logo" src="Logos/EndlessHorrorLogo.png" width="400" height="400" alt="Endless Horror Logo">
+	<h3>Endless Horror</h3>
+	<h5>Horror,Survival,Endless,First Person, 3d</h5>
+	<h4>PC</h4>
+	<p>You have to run through an endless cave and kill monsters in your way some are stronger than others and 	need more hits to kill, also sometimes you will see a huge hole in the ground and a big rock hanging from a 	rope you will have to shoot the rope so that the rock falls in the hole and you can pass, and get coins by 	killing monsters which you can buy guns with.</p>
+	<h4>This Game Will Get Updates.</h4>
+	<button class="Download" onclick="openlink(this)" value="https://infinity101.itch.io/endless-horror">DOWNLOAD</button>
+</div>
+
+<div class="game-group">
+	<img class = "Game-Logo" src="Logos/MidnightBreakoutLogo.png" width="400" height="400" alt="Midnight Breakout Logo">
+	<h3>Midnight Breakout</h3>
+	<h5>Action,Endless,Fast Paced,3d</h5>
+	<h4>Mobile</h4>
+	<p>You are driving your blue Camaro trying to escape the cops while avoiding obstacles along the way and 	trying not to fall, also to get nitro you have to destroy objects and when the nitro bar reaches its max 	press the nitro button to activate it.</p>
+	<h4>This Game Will Get Updates.</h4>
+	<button class="Download" onclick="gotolink(this)" value="https://infinity101.itch.io/midnight-breakout">DOWNLOAD</button>
+</div>
+
+<div class="game-group">
+	<img class = "Game-Logo" src="Logos/GalacticDefenderLogo.png" width="400" height="400" alt="Galactic Defender Logo">
+	<h3>Galactic Defender (Game Jam Version)</h3>
+	<h5>Action,Endless,Fast Paced,3d</h5>
+	<h4>PC</h4>
+	<p>You fly through space with your spaceship while trying to avoid asteroids and destroying other 	spaceships,also there is powerups that you can collect, some are good and some are bad you will get a 	random one everytime.</p>
+	<h4>This Game Was Made For A Game Jam In A Very Short Time So Its Not So Good.</h4>
+	<h4>Note: I Might Make Another Version But Make It Better.</h4>
+	<button class="Download" onclick="gotolink(this)" value="https://infinity101.itch.io/galactic-defender">DOWNLOAD</button>
+</div>
+
+<h4>more games are coming soon.</h4>
+
+</body>
+
+</html>

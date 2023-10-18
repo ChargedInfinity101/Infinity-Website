@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<title>INFINITY 101 Contact Page</title>
+	<meta name="description" content="All The Games Made By INFNINITY Is Here For FREE">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <script src="https://kit.fontawesome.com/a98dc1abec.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+
+.form{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body{
+    background-image: linear-gradient(to bottom right, rgb(110, 110, 110), rgb(73, 73, 73));
+}
+
+form{
+    width: 90%;
+    max-width: 600px;
+    background-color: rgb(49, 49, 49);
+    padding-right: 45px;
+    padding-left: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 6px 20px 0 rgba(0, 0, 0, 0.35);
+}
+
+.input-group{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    outline: 0;
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+    font-size: 15px;
+    font-family: 'poppins', sans-serif;
+    resize: none;
+}
+
+label{
+    font-size: 20px;
+    font-family: 'Montserrat',sans-serif;
+    color: #fff;
+    font-weight: bold;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    transition: all 0.25s;
+}
+
+input:focus~label{
+    top: -35px;
+    font-size: 15px;
+}
+
+input:valid~label{
+    top: -35px;
+    font-size: 15px;
+}
+
+textarea:focus~label{
+    top: -35px;
+    font-size: 15px;
+}
+
+textarea:valid~label{
+    top: -35px;
+    font-size: 15px;
+}
+
+button{
+    width: 250px;
+    height: 50px;
+    border: 2px ;
+    border-color: #fff;
+    border-style: solid;
+    border-radius: 15px;
+    font-size: 30px;
+    font-family: 'Montserrat',sans-serif;
+    background: transparent;
+    color: #fff;
+    transition: all 0.25s;
+}
+
+button:hover{
+    width: 260px;
+    height: 55px;
+    background: #fff;
+    color:rgb(71, 71, 71);
+    font-size: 35px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 6px 20px 0 rgba(0, 0, 0, 0.35);
+}
+
+button:active{
+    opacity: 0.5s;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.row .input-group{
+    flex-basis: 45%;
+}
+
+h1{
+    font-family: 'Poppins',sans-serif;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+}
+
+.AllGames-button{
+		margin-bottom: 10px;
+		color:black;
+		background-color: white;
+		border-style: none;
+		border-radius: 20px;
+		width: 200px;
+		height: 55px;
+		font-size: 30px;
+		font-family: "Abel", sans-serif;
+		font-weight: bold;
+		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.473);
+		transition: opacity 0.25s, width 0.25s, height 0.25s, box-shadow 0.25s, font-size 0.25s;
+	}
+
+	.AllGames-button:hover{
+		box-shadow: 2px 2px 10px rgb(0, 0, 0);
+		width: 210px;
+		height: 60px;
+		font-size: 35px;
+        color:black;
+	}
+
+	.AllGames-button:active{
+		opacity: 0.5;
+		box-shadow: 2px 2px 10px rgb(0, 0, 0);
+		width: 210px;
+		height: 60px;
+		font-size: 35px;
+        color:black;
+	}
+
+	.Home-button{
+		margin-bottom: 10px;
+		color:black;
+		background-color: white;
+		border-style: none;
+		border-radius: 20px;
+		width: 200px;
+		height: 55px;
+		font-size: 30px;
+		font-family: "Abel", sans-serif;
+		font-weight: bold;
+		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.473);
+		transition: opacity 0.25s, width 0.25s, height 0.25s, box-shadow 0.25s, font-size 0.25s;
+	}
+
+	.Home-button:hover{
+		box-shadow: 2px 2px 10px rgb(0, 0, 0);
+		width: 210px;
+		height: 60px;
+		font-size: 35px;
+        color:black;
+	}
+
+	.Home-button:active{
+		opacity: 0.5;
+		box-shadow: 2px 2px 10px rgb(0, 0, 0);
+		width: 210px;
+		height: 60px;
+		font-size: 35px;
+        color:black;
+	}
+
+    .page-buttons{
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+        flex-direction: row-reverse;
+	}
+
+</style>
+
+<body>
+
+    <script>
+
+		function gotolink(link){
+			window.open(link.value);
+		}
+
+		function openlink(link){
+			location.href = link.value;
+		}
+
+	</script>
+
+    <h1>Write Any Idea/Update For A Game</h1>
+
+    <div class="page-buttons">
+		<button class = "AllGames-button" onclick="openlink(this)" value ="All Games.html">All Games</button>
+		<button class = "Home-button" onclick="openlink(this)" value ="index.html">Home</button>
+	</div>
+
+<div class="form">
+
+<form action="https://formspree.io/f/mpzgkgav" method="POST">
+
+    <div class="row">
+        <div class="input-group">
+            <input type="text" id="name" name="Name" required>
+            <label for="name"><i class="fa-solid fa-user"></i> Name</label>
+        </div>
+    
+        <div class="input-group">
+            <input type="text" id="email" name="Email" required>
+            <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+        </div>
+    </div>
+
+    <div class="input-group">
+        <input type="text" id="game" name="Game" required>
+        <label for="game"><i class="fa-solid fa-gamepad"></i> Game</label>
+    </div>
+
+    <div class="input-group">
+        <textarea id="comment" rows="8" name="Comment" required></textarea>
+        <label for="comment"><i class="fa-solid fa-comment"></i> Comment</label>
+    </div>
+
+    <button type="submit">SUBMIT <i class="fa-solid fa-paper-plane"></i></button>
+
+</form>
+
+</div>
+
+</body>

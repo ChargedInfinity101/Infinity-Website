@@ -1,0 +1,283 @@
+ <!DOCTYPE html>
+
+<html>
+<head>
+
+	<title>INFINITY 101 Homepage</title>
+	<meta name="description" content="All The Games Made By INFNINITY Is Here For FREE">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+</head>
+
+<style>
+	.Download{
+		border-radius: 5px;
+		cursor: pointer;
+		font-family: "Abel", sans-serif;
+		padding: 2px;
+		margin-bottom: 120px;
+		border: none;
+		width: 400px;
+		height: 50px;
+		font-weight: bold;
+		font-size: 25px;
+		background-color: black;
+		color: white;
+		transition: height 0.25s, width 0.25s, color 0.25s, background-color 0.25s, box-shadow 0.25s;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	body{	
+		background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(122, 122, 122));
+	}
+
+	.Download:hover{
+		background-color: white;
+		color: black;
+		box-shadow: 2px 2px 10px rgba(97, 97, 97, 0.473);
+		width: 410px;
+		height: 60px;
+	}
+	
+	.Download:active{
+		opacity: 0.65;
+		background-color: rgb(190, 190, 190);
+		color: black;
+		box-shadow: 2px 2px 10px rgba(97, 97, 97, 0.473);
+		width: 410px;
+		height: 60px;
+	}
+
+	p{
+		font-family: "Montserrat", sans-serif;
+		font-size: 25px;
+		text-wrap:balance;
+	}
+	.Header-text{
+		font-family: "Montserrat", sans-serif;
+		font-weight: bold;
+		text-align: center;
+		color: white;
+	}
+
+	h1{
+		font-family: "Montserrat", sans-serif;
+		font-weight: bold;
+		text-align: center;
+		font-size: 50px;
+		color: white;
+	}
+
+	h2{
+		font-family: "Montserrat", sans-serif;
+		font-weight: bold;
+		text-align: center;
+		color: white;
+	}
+
+	.beggining{
+		font-family: "Poppins", Bold;
+		text-align: left;
+		font-weight: bolder;
+		font-size: 70px;
+		margin-left: 25px;
+	}
+	
+	h3{
+		font-family: "Poppins", sans-serif;
+		font-weight: bold;
+		font-size: 35px;
+	}
+
+	h4{
+		font-family: "Montserrat", sans-serif;
+		font-weight: bold;
+		font-size: 25px;
+	}
+
+	h5{
+		font-family: "Montserrat", sans-serif;
+		font-size: 20px;
+	}
+
+	.Games-Coming-Soon{
+		font-family: "Montserrat", sans-serif;
+		text-align: center;
+	}
+
+	.Media-Holder{
+		text-align: center;
+	}
+
+	.Social-media{
+		margin-top: 10px;
+		display:inline-block;
+		transition: height 0.25s, width 0.25s, opacity 0.25s;
+		background-color: white;
+		border-radius: 14px;
+	}
+
+	.Social-media:hover{
+		width: 60px;
+		height: 60px;
+	}
+
+	.Social-media:active{
+		opacity: 0.5;
+	}
+
+	.Header{
+		background-image: linear-gradient(to bottom right, rgb(116, 116, 116), rgb(83, 83, 83));
+	}
+
+	a{
+		color: transparent;
+	}
+	.AllGames-button{
+		margin-bottom: 10px;
+		color:black;
+		background-color: white;
+		border-style: none;
+		border-radius: 20px;
+		width: 200px;
+		height: 55px;
+		font-size: 30px;
+		font-family: "Abel", sans-serif;
+		font-weight: bold;
+		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.473);
+		transition: opacity 0.25s, width 0.25s, height 0.25s, box-shadow 0.25s, font-size 0.25s;
+	}
+
+	.AllGames-button:hover{
+		box-shadow: 2px 2px 10px rgb(0, 0, 0);
+		width: 210px;
+		height: 60px;
+		font-size: 35px;
+	}
+
+	.AllGames-button:active{
+		opacity: 0.5;
+		box-shadow: 2px 2px 10px rgb(0, 0, 0);
+		width: 210px;
+		height: 60px;
+		font-size: 35px;
+	}
+
+	.Contact-button{
+		margin-bottom: 10px;
+		color:black;
+		background-color: white;
+		border-style: none;
+		border-radius: 20px;
+		width: 200px;
+		height: 55px;
+		font-size: 30px;
+		font-family: "Abel", sans-serif;
+		font-weight: bold;
+		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.473);
+		transition: opacity 0.25s, width 0.25s, height 0.25s, box-shadow 0.25s, font-size 0.25s;
+	}
+
+	.Contact-button:hover{
+		box-shadow: 2px 2px 10px rgb(0, 0, 0);
+		width: 210px;
+		height: 60px;
+		font-size: 35px;
+	}
+
+	.Contact-button:active{
+		opacity: 0.5;
+		box-shadow: 2px 2px 10px rgb(0, 0, 0);
+		width: 210px;
+		height: 60px;
+		font-size: 35px;
+	}
+
+	.Game-Logo{
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 6px 20px 0 rgba(0, 0, 0, 0.35);
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+
+	.game-group{
+		display:flex;
+		justify-content: center;
+		text-align: center;
+		flex-direction: column;
+	}
+
+	.page-buttons{
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+
+</style>
+
+<body>
+
+	<script>
+
+		function gotolink(link){
+			window.open(link.value);
+		}
+
+		function openlink(link){
+			location.href = link.value;
+		}
+
+	</script>
+
+<div class="Header">
+	<h1>INFINITY</h1>
+	<h2>Every Game Made By Infinity FOR FREE!</h2>
+	<section>
+		<p class="Header-text">Thank you for visiting</p>
+		<div class="Media-Holder">
+
+			<a href="https://www.youtube.com/channel/UC9LPVighp-0lyY0iFWKVBgA" target="_blank">
+
+				<img class="Social-media" src="Pictures/YoutubeLogo.png" width="50", height="50", alt="Youtube">
+
+			</a>
+
+			<a href="https://www.instagram.com/charged_infinity101/" target="_blank">
+
+				<img class="Social-media" src="Pictures/InstagramLogo.png" width="50", height="50", alt="Instagram">
+
+			</a>
+
+			<a href="https://www.tiktok.com/@charged_infinity101" target="_blank">
+
+				<img class="Social-media" src="Pictures/TiktokLogo.png" width="50", height="50", alt="TikTok">
+
+			</a>
+
+		</div>
+	</section>
+
+	<div class="page-buttons">
+		<button class = "AllGames-button" onclick="openlink(this)" value ="All Games.html">All Games</button>
+		<button class = "Contact-button" onclick="openlink(this)" value ="Contact.html">Contact</button>
+	</div>
+</div>
+
+<h3 class="beggining">The Best Selling:</h3>
+
+<div class="game-group">
+	<img class="Game-Logo" src="Logos/MidnightBreakoutLogo.png" width="400" height="400" alt="Midnight Breakout Logo">
+	<h3>Midnight Breakout</h3>
+	<h5>Action,Endless,Fast Paced,3d</h5>
+	<h4>Mobile</h4>
+	<p>You are driving your blue Camaro trying to escape the cops while avoiding obstacles along the way and 	trying not to fall, also to get nitro you have to destroy objects and when the nitro bar reaches its max 	press the nitro button to activate it.</p>
+	<h4>This Game Will Get Updates.</h4>
+	<button class="Download" onclick="gotolink(this)" value="https://infinity101.itch.io/midnight-breakout">DOWNLOAD</button>
+</div>
+
+</body>
+
+</html>
