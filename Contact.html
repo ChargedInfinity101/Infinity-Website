@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <script src="https://kit.fontawesome.com/a98dc1abec.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="Pictures/my profile pic.png" />
 </head>
 
 <style>
@@ -52,7 +53,7 @@ input, textarea{
     color: #fff;
     background: transparent;
     font-size: 15px;
-    font-family: 'poppins', sans-serif;
+    font-family: sans-serif;
     resize: none;
 }
 
@@ -134,75 +135,88 @@ h1{
     font-size: 50px;
 }
 
-.AllGames-button{
-		margin-bottom: 10px;
-		color:black;
-		background-color: white;
-		border-style: none;
-		border-radius: 20px;
-		width: 200px;
-		height: 55px;
-		font-size: 30px;
-		font-family: "Abel", sans-serif;
-		font-weight: bold;
-		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.473);
-		transition: opacity 0.25s, width 0.25s, height 0.25s, box-shadow 0.25s, font-size 0.25s;
-	}
-
-	.AllGames-button:hover{
-		box-shadow: 2px 2px 10px rgb(0, 0, 0);
-		width: 210px;
-		height: 60px;
-		font-size: 35px;
-        color:black;
-	}
-
-	.AllGames-button:active{
-		opacity: 0.5;
-		box-shadow: 2px 2px 10px rgb(0, 0, 0);
-		width: 210px;
-		height: 60px;
-		font-size: 35px;
-        color:black;
-	}
-
-	.Home-button{
-		margin-bottom: 10px;
-		color:black;
-		background-color: white;
-		border-style: none;
-		border-radius: 20px;
-		width: 200px;
-		height: 55px;
-		font-size: 30px;
-		font-family: "Abel", sans-serif;
-		font-weight: bold;
-		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.473);
-		transition: opacity 0.25s, width 0.25s, height 0.25s, box-shadow 0.25s, font-size 0.25s;
-	}
-
-	.Home-button:hover{
-		box-shadow: 2px 2px 10px rgb(0, 0, 0);
-		width: 210px;
-		height: 60px;
-		font-size: 35px;
-        color:black;
-	}
-
-	.Home-button:active{
-		opacity: 0.5;
-		box-shadow: 2px 2px 10px rgb(0, 0, 0);
-		width: 210px;
-		height: 60px;
-		font-size: 35px;
-        color:black;
-	}
-
-    .page-buttons{
+    .navigation{
 		display: flex;
 		align-items: center;
 		justify-content: space-evenly;
-        flex-direction: row-reverse;
+		background-color: white;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		border-radius: 10px;
+		margin-bottom: 5px;
+		height: 10%;
+	}
+
+	.navigation ul{
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		width: 75%;
+		height: 100%;
+	}
+
+	.navigation ul li{
+		list-style: none;
+		position: relative;
+		z-index: 1;
+	}
+
+	.navigation ul li a{
+		color: rgb(0, 0, 0);
+		font-family: 'Poppins',sans-serif;
+		font-weight: bold;
+		margin: 25px;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.navigation ul li a .list-icon{
+		position: relative;
+		display: block;
+		line-height: 75px;
+		font-size: 35px;
+		transition: 0.35s;
+	}
+
+    .navigation ul li a .list-icon-active{
+		position: relative;
+		display: block;
+		line-height: 75px;
+		font-size: 35px;
+		transition: 0.35s;
+		transform: translateY(-10%);
+		color: gray;
+	}
+
+	.navigation ul li:hover a .list-icon{
+		transform: translateY(-10%);
+	}
+
+	.navigation ul li a .list-text{
+		position: absolute;
+		transition: 0.35s;
+		opacity: 0;
+		transform: translateY(-10px);
+		font-size: 15px;
+	}
+
+    .navigation ul li a .list-text-active{
+		position: absolute;
+		transition: 0.35s;
+		opacity: 1;
+		font-size: 15px;
+		transform: translateY(20px);
+		color: gray;
+	}
+
+	.navigation ul li:hover a .list-text{
+		opacity: 1;
+		transform: translateY(20px);
 	}
 
 </style>
@@ -210,6 +224,9 @@ h1{
 <body>
 
     <script>
+
+        const HoverAudio = new Audio();
+		HoverAudio.src = "./Audio/ButtonHover.mp3";
 
 		function gotolink(link){
 			window.open(link.value);
@@ -223,38 +240,62 @@ h1{
 
     <h1>Write Any Idea/Update For A Game</h1>
 
-    <div class="page-buttons">
-		<button class = "AllGames-button" onclick="openlink(this)" value ="All Games.html">All Games</button>
-		<button class = "Home-button" onclick="openlink(this)" value ="index.html">Home</button>
-	</div>
+    <div class="navigation">
+        <ul>
+            <li onmouseenter="HoverAudio.play();" class="list hover">
+                <a href="index.html">
+                    <span class="list-icon"><i class="fa-solid fa-house"></i></span>
+                    <span class="list-text">Home</span>
+                </a>
+            </li>
+            <li onmouseenter="HoverAudio.play();" class="list">
+                <a href="All Games.html">
+                    <span class="list-icon"><i class="fa-solid fa-gamepad"></i></span>
+                    <span class="list-text">Games</span>
+                </a>
+            </li>
+            <li onmouseenter="HoverAudio.play();" class="list">
+                <a href="Contact.html">
+                    <span class="list-icon-active"><i class="fa-solid fa-comments"></i></span>
+                    <span class="list-text-active">Contact</span>
+                </a>
+            </li>
+            <li onmouseenter="HoverAudio.play();" class="list">
+				<a href="About.html">
+					<span class="list-icon"><i class="fa-solid fa-circle-info"></i></span>
+					<span class="list-text">About</span>
+				</a>
+			</li>
+        </ul>
+    </div>
 
 <div class="form">
 
 <form action="https://formspree.io/f/mpzgkgav" method="POST">
 
     <div class="row">
-        <div class="input-group">
+        <div  onmouseenter="HoverAudio.play();"class="input-group">
             <input type="text" id="name" name="Name" required>
             <label for="name"><i class="fa-solid fa-user"></i> Name</label>
         </div>
     
-        <div class="input-group">
+        <div onmouseenter="HoverAudio.play();" class="input-group">
             <input type="text" id="email" name="Email" required>
             <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
         </div>
     </div>
 
-    <div class="input-group">
+    <div onmouseenter="HoverAudio.play();" class="input-group">
         <input type="text" id="game" name="Game" required>
         <label for="game"><i class="fa-solid fa-gamepad"></i> Game</label>
     </div>
 
-    <div class="input-group">
+    <div onmouseenter="HoverAudio.play();" class="input-group">
         <textarea id="comment" rows="8" name="Comment" required></textarea>
         <label for="comment"><i class="fa-solid fa-comment"></i> Comment</label>
     </div>
 
-    <button type="submit">SUBMIT <i class="fa-solid fa-paper-plane"></i></button>
+    <button onmouseenter="HoverAudio.play();" type="submit">SUBMIT <i class="fa-solid fa-paper-plane"></i></button>
 
 </form>
 

@@ -7,7 +7,8 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 	<meta name="description" content="All The Games Made By INFNINITY Is Here For FREE">
-
+	<script src="https://kit.fontawesome.com/a98dc1abec.js" crossorigin="anonymous"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="Pictures/my profile pic.png" />
 </head>
 
 <style>
@@ -48,6 +49,10 @@
 	.Download:active{
 		opacity: 0.65;
 		background-color: rgb(190, 190, 190);
+		color: black;
+		box-shadow: 2px 2px 10px rgba(97, 97, 97, 0.473);
+		width: 410px;
+		height: 60px;
 	}
 
 	p{
@@ -97,6 +102,7 @@
 	.Games-Coming-Soon{
 		font-family: "Montserrat", sans-serif;
 		text-align: center;
+		margin-bottom: 200px;
 	}
 
 	.Game-Logo{
@@ -110,62 +116,6 @@
 		color: transparent;
 	}
 
-	.Home-button{
-		margin-top: 10px;
-		color:black;
-		background-color: white;
-		border-style: none;
-		border-radius: 20px;
-		width: 200px;
-		height: 55px;
-		font-size: 30px;
-		font-family: "Abel", sans-serif;
-		font-weight: bold;
-		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.473);
-		transition: opacity 0.25s, width 0.25s, height 0.25s, box-shadow 0.25s, font-size 0.25s;
-	}
-
-	.Home-button:hover{
-		box-shadow: 2px 2px 10px rgb(0, 0, 0);
-		width: 210px;
-		height: 60px;
-		font-size: 35px;
-	}
-
-	.Home-button:active{
-		opacity: 0.5;
-	}
-
-	.Contact-button{
-		margin-bottom: 10px;
-		color:black;
-		background-color: white;
-		border-style: none;
-		border-radius: 20px;
-		width: 200px;
-		height: 55px;
-		font-size: 30px;
-		font-family: "Abel", sans-serif;
-		font-weight: bold;
-		box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.473);
-		transition: opacity 0.25s, width 0.25s, height 0.25s, box-shadow 0.25s, font-size 0.25s;
-	}
-
-	.Contact-button:hover{
-		box-shadow: 2px 2px 10px rgb(0, 0, 0);
-		width: 210px;
-		height: 60px;
-		font-size: 35px;
-	}
-
-	.Contact-button:active{
-		opacity: 0.5;
-		box-shadow: 2px 2px 10px rgb(0, 0, 0);
-		width: 210px;
-		height: 60px;
-		font-size: 35px;
-	}
-
 	.Header{
 		background-image: linear-gradient(to bottom right, rgb(116, 116, 116), rgb(83, 83, 83));
 	}
@@ -176,11 +126,88 @@
 		text-align: center;
 	}
 
-	.page-buttons{
+	.navigation{
 		display: flex;
-		align-items: baseline;
+		align-items: center;
 		justify-content: space-evenly;
-		margin-bottom: 50px;
+		background-color: white;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		border-radius: 10px;
+		margin-bottom: 5px;
+		height: 10%;
+	}
+
+	.navigation ul{
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		width: 75%;
+		height: 100%;
+	}
+
+	.navigation ul li{
+		list-style: none;
+		position: relative;
+		z-index: 1;
+	}
+
+	.navigation ul li a{
+		color: rgb(0, 0, 0);
+		font-family: 'Poppins',sans-serif;
+		font-weight: bold;
+		margin: 25px;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.navigation ul li a .list-icon{
+		position: relative;
+		display: block;
+		line-height: 75px;
+		font-size: 35px;
+		transition: 0.35s;
+	}
+
+	.navigation ul li a .list-icon-active{
+		position: relative;
+		display: block;
+		line-height: 75px;
+		font-size: 35px;
+		transition: 0.35s;
+		transform: translateY(-10%);
+		color: gray;
+	}
+
+	.navigation ul li:hover a .list-icon{
+		transform: translateY(-10%);
+	}
+
+	.navigation ul li a .list-text{
+		position: absolute;
+		transition: 0.35s;
+		opacity: 0;
+		transform: translateY(-10px);
+		font-size: 15px;
+	}
+
+	.navigation ul li a .list-text-active{
+		position: absolute;
+		transition: 0.35s;
+		opacity: 1;
+		font-size: 15px;
+		transform: translateY(20px);
+		color: gray;
+	}
+
+	.navigation ul li:hover a .list-text{
+		opacity: 1;
+		transform: translateY(20px);
 	}
 
 </style>
@@ -188,6 +215,9 @@
 <body>
 
 	<script>
+
+		const HoverAudio = new Audio();
+		HoverAudio.src = "./Audio/ButtonHover.mp3";
 
 		function gotolink(link){
 			window.open(link.value);
@@ -201,10 +231,34 @@
 
 	<div class="Header">
 		<h1>All Games:</h1>
-	<div class="page-buttons">
-		<h2><button class = "Home-button" onclick="openlink(this)" value ="index.html">Home</button></h2>
-		<button class = "Contact-button" onclick="openlink(this)" value ="Contact.html">Contact</button>
-	</div>
+		<div class="navigation">
+			<ul>
+				<li onmouseenter="HoverAudio.play();" class="list hover">
+					<a href="index.html">
+						<span class="list-icon"><i class="fa-solid fa-house"></i></span>
+						<span class="list-text">Home</span>
+					</a>
+				</li>
+				<li onmouseenter="HoverAudio.play();" class="list">
+					<a href="All Games.html">
+						<span class="list-icon-active"><i class="fa-solid fa-gamepad"></i></span>
+						<span class="list-text-active">Games</span>
+					</a>
+				</li>
+				<li onmouseenter="HoverAudio.play();" class="list">
+					<a href="Contact.html">
+						<span class="list-icon"><i class="fa-solid fa-comments"></i></span>
+						<span class="list-text">Contact</span>
+					</a>
+				</li>
+				<li onmouseenter="HoverAudio.play();" class="list">
+					<a href="About.html">
+						<span class="list-icon"><i class="fa-solid fa-circle-info"></i></span>
+						<span class="list-text">About</span>
+					</a>
+				</li>
+			</ul>
+		</div>
 	</div>
 <div class="game-group">
 	<img class = "Game-Logo" src="Logos/EndlessHorrorLogo.png" width="400" height="400" alt="Endless Horror Logo">
@@ -213,7 +267,7 @@
 	<h4>PC</h4>
 	<p>You have to run through an endless cave and kill monsters in your way some are stronger than others and 	need more hits to kill, also sometimes you will see a huge hole in the ground and a big rock hanging from a 	rope you will have to shoot the rope so that the rock falls in the hole and you can pass, and get coins by 	killing monsters which you can buy guns with.</p>
 	<h4>This Game Will Get Updates.</h4>
-	<button class="Download" onclick="gotolink(this)" value="https://infinity101.itch.io/endless-horror">DOWNLOAD</button>
+	<button class="Download" onmouseenter="HoverAudio.play();" onclick="gotolink(this)" value="https://infinity101.itch.io/endless-horror">DOWNLOAD</button>
 </div>
 
 <div class="game-group">
@@ -223,7 +277,7 @@
 	<h4>Mobile</h4>
 	<p>You are driving your blue Camaro trying to escape the cops while avoiding obstacles along the way and 	trying not to fall, also to get nitro you have to destroy objects and when the nitro bar reaches its max 	press the nitro button to activate it.</p>
 	<h4>This Game Will Get Updates.</h4>
-	<button class="Download" onclick="gotolink(this)" value="https://infinity101.itch.io/midnight-breakout">DOWNLOAD</button>
+	<button class="Download" onmouseenter="HoverAudio.play();" onclick="gotolink(this)" value="https://infinity101.itch.io/midnight-breakout">DOWNLOAD</button>
 </div>
 
 <div class="game-group">
@@ -234,7 +288,7 @@
 	<p>You fly through space with your spaceship while trying to avoid asteroids and destroying other 	spaceships,also there is powerups that you can collect, some are good and some are bad you will get a 	random one everytime.</p>
 	<h4>This Game Was Made For A Game Jam In A Very Short Time So Its Not So Good.</h4>
 	<h4>Note: I Might Make Another Version But Make It Better.</h4>
-	<button class="Download" onclick="gotolink(this)" value="https://infinity101.itch.io/galactic-defender">DOWNLOAD</button>
+	<button class="Download" onmouseenter="HoverAudio.play();" onclick="gotolink(this)" value="https://infinity101.itch.io/galactic-defender">DOWNLOAD</button>
 </div>
 
 <h4>more games are coming soon.</h4>
